@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Test - veiviser",
+    "footer": "Your footer here!"
+  },
+  "schema": [
+    {
+      "id": "samspill",
+      "type": "Page",
+      "heading": "Samspill med omgivelsene",
+      "lead":
+        "Fyll ut informasjon om byggeprosjektet ditt.",
+      "children": [
+        {
+          "id": "cat.image",
+          "type": "Image",
+          "text": "Det er viktig at bygningene har samspill med omgivelsene",
+          "image": {
+            "url": "https://boligpartnercdn.imgix.net/Nyheter/moderne-boliger-i-samspill-med-naturen/Moderne-boliger-i-samspill-med-naturen.jpg",
+            "alt": "alt for image"
+          }
+        },
+        {
+          "id": "beskrivelsesfelt1",
+          "property": "preferences.beskrivelse1",
+          "type": "Textarea",
+          "heading": "Hva kjennetegner landskapet og vegetasjonen på stedet? Hvordan har dette lagt føringer for plasseringen av den nye bygningen?",
+          "text": "Her kan det være hjelpetekst",
+          "information": "Pass på å beskrive...",
+          "summary": "Se eksempler",
+          "details":
+            "<h4>Vil du ha gode eksempler?</h4><p>Les mer på nettsidene til <a href=\"https://dibk.no/statens-pris-for-byggkvalitet\" target=\"_blank\">Statens pris for byggkvalitet</a>. Der kan du blant annet finne inspirasjon om.... </p><h4>Hva er god byggeskikk og estetikk?</h4><p>Finn ut mer i artikkelen <a href=\"https://dibk.no/saksbehandling/byggeskikk/god-byggeskikk-og-estetikk\" target=\"_blank\">God byggeskikk og estetikk</a></p>"
+        },
+        {
+          "id": "beskrivelsesfelt2",
+          "property": "preferences.beskrivelse2",
+          "type": "Textarea",
+          "heading": "Hva kjennetegner landskapet og vegetasjonen på stedet?",
+          "text": "Her kan det være hjelpetekst",
+          "information": "Pass på å beskrive...",
+          "summary": "Se eksempler",
+          "details":
+            "<h4>Vil du ha gode eksempler?</h4><p>Les mer på nettsidene til <a href=\"https://dibk.no/statens-pris-for-byggkvalitet\" target=\"_blank\">Statens pris for byggkvalitet</a>. Der kan du blant annet finne inspirasjon om.... </p><h4>Hva er god byggeskikk og estetikk?</h4><p>Finn ut mer i artikkelen <a href=\"https://dibk.no/saksbehandling/byggeskikk/god-byggeskikk-og-estetikk\" target=\"_blank\">God byggeskikk og estetikk</a></p>"
+        },
+        {
+          "id": "beskrivelsesfelt3",
+          "property": "preferences.beskrivelse3",
+          "type": "Textarea",
+          "heading": "Beskriv terrenget på eiendommen. Hvordan har dere tatt hensyn til terrenget når dere har plassert byggverket på tomta?",
+          "text": "Her kan det være hjelpetekst",
+          "information": "Pass på å beskrive...",
+          "summary": "Se eksempler",
+          "details":
+            "<h4>Vil du ha gode eksempler?</h4><p>Les mer på nettsidene til <a href=\"https://dibk.no/statens-pris-for-byggkvalitet\" target=\"_blank\">Statens pris for byggkvalitet</a>. Der kan du blant annet finne inspirasjon om.... </p><h4>Hva er god byggeskikk og estetikk?</h4><p>Finn ut mer i artikkelen <a href=\"https://dibk.no/saksbehandling/byggeskikk/god-byggeskikk-og-estetikk\" target=\"_blank\">God byggeskikk og estetikk</a></p>"    
+        },
+        {
+          "id": "beskrivelsesfelt4",
+          "property": "preferences.beskrivelse4",
+          "type": "Textarea",
+          "heading": "Hvordan oppfyller prosjektet kravene til gode uteoppholdsarealer?",
+          "text": "Her kan det være hjelpetekst",
+          "information": "Pass på å beskrive...",
+          "summary": "Se eksempler",
+          "details":
+            "<h4>Vil du ha gode eksempler?</h4><p>Les mer på nettsidene til <a href=\"https://dibk.no/statens-pris-for-byggkvalitet\" target=\"_blank\">Statens pris for byggkvalitet</a>. Der kan du blant annet finne inspirasjon om.... </p><h4>Hva er god byggeskikk og estetikk?</h4><p>Finn ut mer i artikkelen <a href=\"https://dibk.no/saksbehandling/byggeskikk/god-byggeskikk-og-estetikk\" target=\"_blank\">God byggeskikk og estetikk</a></p>"
+        }
+      ]
+    },
+    {
+      "id": "testtypes",
+      "type": "Page",
+      "heading": "Informasjon om søker",
+      "lead":
+        "Her kan du fylle ut informasjon om firmaet ditt dersom du vil printe ut innholdet.",
+      "children": [
+        {
+          "property": "orgnr",
+          "type": "FetchOrg",
+          "heading": "Organisasjonsnummer",
+          "text": "<p>Eksempel 974 760 223 eller 974760223</p>",
+          "source":
+            "https://data.brreg.no/enhetsregisteret/enhet.json?page=0&size=30&$filter=organisasjonsnummer+eq+",
+          "information":
+            "Er firmaets navn eller adresse feil? Da må du endre denne informasjonen via skjemaet <a href=\"https://www.altinn.no/no/Starte-og-drive-bedrift/Drive/Andre-driftsoppgaver/Flytting-og-omorganisering/Hvordan-meldes-flytting-og-andre-endringer/\">Samordnet registermelding</a> i Altinn før du fortsetter.",
+          "fetchSG": true,
+          "SGheading": "${name} er registrert med sentral godkjenning for følgende områder",
+          "invalidapproval": "Vi fant ikke godkjenningen din i systemet vårt",
+          "SGsource": "https://sgregister.dibk.no/api/enterprises/"
+        },
+        {
+          "type": "Group",
+          "simple": true,
+          "heading": "Kontaktperson for prosjektet",
+          "property": "contactperson",
+          "children": [
+            {
+              "property": "contactperson.name",
+              "type": "Input",
+              "heading": "Navn"
+            },
+            {
+              "property": "contactperson.email",
+              "type": "Input",
+              "validator": {
+                "pattern": "\\S+@\\S+\\.\\S+",
+                "error": "Må være en epost"
+              },
+              "heading": "Epost"
+            },
+            {
+              "property": "contactperson.phone",
+              "type": "Input",
+              "heading": "Telefon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hooray",
+      "type": "Result",
+      "errorheading": "Du har ikke svart på alle spørsmålene",
+      "errorlead":
+        "Du kan se hvilke spørsmål du ikke har svart på i oppsummeringen under. Der kan du også klikke deg inn på hvert steg i veiviseren for å legge til og endre dine svar.",
+      "heading": "Resultatside",
+      "lead":
+        "Les nøye gjennom svarene dine, og sjekk at alt stemmer før du legger ved redegjørelsen byggesøknaden din.",
+      "exporter": "dataExport"
+    }
+  ]
+}
